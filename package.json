@@ -1,6 +1,6 @@
 {
   "name": "znu-event",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple event emitter",
   "main": "lib/znu-event.cjs.js",
   "module": "lib/znu-event.esm.js",
@@ -16,7 +16,7 @@
     "build": "rimraf lib && rollup -c && npm run build:type",
     "test": "jest --no-cache",
     "eslint": "eslint --ext .js,.vue,.tsx,.ts --fix ./src",
-    "release": "npm run eslint && npm run test && standard-version && npm run build && npm pub && git push && rimraf lib"
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
