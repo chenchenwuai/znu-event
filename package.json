@@ -2,6 +2,12 @@
   "name": "znu-event",
   "version": "0.0.3",
   "description": "A simple event emitter",
+  "keywords": [
+    "simple",
+    "event",
+    "emitter",
+    "typescript"
+  ],
   "main": "lib/znu-event.cjs.js",
   "module": "lib/znu-event.esm.js",
   "browser": "lib/znu-event.umd.js",
@@ -16,7 +22,7 @@
     "build": "rimraf lib && rollup -c && npm run build:type",
     "test": "jest --no-cache",
     "eslint": "eslint --ext .js,.vue,.tsx,.ts --fix ./src",
-    "release": "standard-version"
+    "release": "npm run test && standard-version && npm run build && npm pub && git push && rimraf lib"
   },
   "husky": {
     "hooks": {
@@ -35,9 +41,11 @@
   },
   "author": "chenwuai",
   "license": "MIT",
-  "standard-version": {
-    "releaseCommitMessageFormat": "chore🐳(release): {{currentTag}}"
+  "bugs": {
+    "url": "https://github.com/chenchenwuai/znu-event/issues"
   },
+  "homepage": "https://github.com/chenchenwuai/znu-event#readme",
+  
   "devDependencies": {
     "@types/jest": "^23.3.5",
     "@typescript-eslint/eslint-plugin": "^3.6.0",
