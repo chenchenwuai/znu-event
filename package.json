@@ -1,6 +1,6 @@
 {
   "name": "znu-event",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple event emitter",
   "main": "lib/znu-event.cjs.js",
   "module": "lib/znu-event.esm.js",
@@ -35,6 +35,9 @@
   },
   "author": "chenwuai",
   "license": "MIT",
+  "standard-version": {
+    "releaseCommitMessageFormat": "chore🐳(release): {{currentTag}}"
+  },
   "devDependencies": {
     "@types/jest": "^23.3.5",
     "@typescript-eslint/eslint-plugin": "^3.6.0",
