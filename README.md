@@ -1,7 +1,6 @@
 ## znu-event
 
-a sample event emitter
-
+🚀 a sample event emitter 🌈
 
 ## 使用
 
