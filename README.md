@@ -102,6 +102,22 @@ emitter.has('add'); // true
 emitter.eventNames();
 ```
 
+### offAll()
+解除所有绑定事件
+
+``` javascript
+const callback = (a,b,c,d)=>{
+    console(a,b,c,d); // 1,2,3,4
+};
+emitter.on('add', callback);
+emitter.on('edf', callback);
+emitter.offAll();
+
+// add，edf事件不会触发
+emitter.emit('add', 1,2,3,4);
+emitter.emit('edf', 1,2,3,4);
+```
+
 ### destroy()
 销毁实例
 
