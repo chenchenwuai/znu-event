@@ -59,6 +59,13 @@ export default class ZnuEvent {
   }
 
   /**
+   * 解除所有绑定
+   */
+  offAll(): void {
+    this._listenersMap = {}
+  }
+
+  /**
    * 按照监听器注册顺序，同步调用每个注册到 eventName 的事件的监听器，并传入参数。
    * @param {String|Symbol} eventName 事件名
    * @param {Any} payload 载荷数据
@@ -108,6 +115,6 @@ export default class ZnuEvent {
    * 销毁实例
    */
   destroy(): void{
-    this._listenersMap = {}
+    this.offAll()
   }
 }

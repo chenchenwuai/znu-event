@@ -7,6 +7,7 @@ export default class ZnuEvent {
     on(eventName: string, listener: Listener): ZnuEvent;
     once(eventName: string, listener: Listener): ZnuEvent;
     off(eventName: string, listener?: Listener): ZnuEvent;
+    offAll(): void;
     emit(eventName: string, ...payload: any[]): boolean;
     has(eventName: string): boolean;
     eventNames(): string[];

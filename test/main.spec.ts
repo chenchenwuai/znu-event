@@ -71,6 +71,15 @@ test('eventNames是否正确返回所有事件名?', ()=>{
   expect(eventEmitter.eventNames()).toContain('pinch');
 });
 
+test('offAll运行是否正确?', () => {
+  const mockCallback = jest.fn();
+  const eventEmitter = new EventEmitter();
+  eventEmitter.on('tap', mockCallback);
+  eventEmitter.on('pan', mockCallback);
+  eventEmitter.on('pinch', mockCallback);
+  eventEmitter.offAll();
+  expect(eventEmitter.eventNames().length).toBe(0);
+});
 
 test('destory是否生效?', ()=>{
   const mockCallback = jest.fn();
