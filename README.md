@@ -1,6 +1,15 @@
 ## znu-event
 
-🚀 a sample event emitter 🌈
+🚀 a sample event emitter 🌈. 无依赖，TypeScript、rollup、自动测试
+
+[GitHub](https://github.com/chenchenwuai/znu-event)
+[NPM](https://www.npmjs.com/package/znu-event)
+如果帮助到了你，请给我一个star~~~ 💖，如果你发现bug，请尽情的提issue。
+
+## 安装
+``` javascript
+    npm i znu-event 
+```
 
 ## 使用
 
