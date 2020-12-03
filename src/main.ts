@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Listener = ((...payload: any[]) => void) & { isOnce?: boolean}
+export type Listener = ((...payload: any[]) => void) & { isOnce?: boolean}
 
 interface ListenersMap {
   [propName: string]: Listener[]
