@@ -1,4 +1,4 @@
-declare type Listener = ((...payload: any[]) => void) & {
+export declare type Listener = ((...payload: any[]) => void) & {
     isOnce?: boolean;
 };
 export default class ZnuEvent {
@@ -13,4 +13,3 @@ export default class ZnuEvent {
     eventNames(): string[];
     destroy(): void;
 }
-export {};
